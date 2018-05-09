@@ -364,32 +364,19 @@ td {
 
                 .mask{
                     border-radius: 5px;
-                    @include md-width{
-                        display: table;
-                        width: 100%;
-                        padding: 30% 10px;
-                        color: #FFF;
-                        background-color: rgba(0,0,0,0.7);
-                        opacity: 0;
-                        transition: all 1s;
-                    }
-                    @include sm-width{
-                        padding-bottom: 65%;
-                        position: relative;
-                    }
+                    opacity: 0;
+                    display: table;
+                    width: 100%;
+                    padding: 30% 10px;
+                    color: #FFF;
+                    background-color: rgba(0,0,0,0.7);
+                    transition: all 1s;
                     
                     .item_link{
                         text-align: center;
                         font-size: 2em;
-                        @include md-width{
-                            display: table-cell;
-                            vertical-align: middle;
-                        }
-                        @include sm-width{
-                            position: absolute;
-                            width: 100%;
-                            bottom: -30px;
-                        }
+                        display: table-cell;
+                        vertical-align: middle;
                     }
                 }
             }
@@ -402,10 +389,13 @@ td {
                     padding-left: 6%;
                 }
 
-                .item_title{
-                    font-size: 1.4em;
-                    font-weight: bold;
+                .section_title{
+                    width: 60%;
                     padding-bottom: 20px;
+                    min-width: 200px;
+                    @include xs-width{
+                        width: 80%;
+                    }
                 }
 
                 .item_des{
