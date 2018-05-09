@@ -94,6 +94,7 @@ body {
     margin: 0;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:none;
+    @include font_rwd;
 }
 
 a img {
@@ -265,6 +266,32 @@ td {
 .index_page{
     color: #333;
 
+    .section{
+        padding: 0 5%;
+    }
+
+    .section_title{
+        color: $main_color;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding: 10px 0;
+        width: 30%;
+        border-bottom: 1px $main_color solid;
+        position: relative;
+        margin-bottom: 20px;
+        @include sm-width{
+            width: 50%;
+        }
+
+        &:before{
+            content: '.';
+            position: absolute;
+            bottom: -0.35em;
+            left: -2px;
+            font-size: 1.6em;
+        }
+    }
+
     .index_banner{
         @include bg_img;
         background-image: url('../images/index_banner-02.svg');
@@ -303,6 +330,99 @@ td {
             .name{
                 font-size: 1.4em;
                 font-weight: bold;
+            }
+        }
+    }
+
+    .index_about_inner{
+        line-height: 1.5em;
+    }
+
+    .index_profile_inner{
+        @include md-width{
+            font-size: 0;
+        }
+
+        .profile_item{
+            margin-bottom: 5%;
+
+            .item_img{
+                @include bg_img;
+                border: 1px #FFF solid;
+                border-radius: 5px;
+                @include md-width{
+                    font-size: 16px;
+                    @include inline_block_middle;
+                    width: 47%;
+                }
+
+                &:hover{
+                    .mask{
+                        opacity: 1;
+                    }
+                }
+
+                .mask{
+                    border-radius: 5px;
+                    @include md-width{
+                        display: table;
+                        width: 100%;
+                        padding: 30% 10px;
+                        color: #FFF;
+                        background-color: rgba(0,0,0,0.7);
+                        opacity: 0;
+                        transition: all 1s;
+                    }
+                    @include sm-width{
+                        padding-bottom: 65%;
+                        position: relative;
+                    }
+                    
+                    .item_link{
+                        text-align: center;
+                        font-size: 2em;
+                        @include md-width{
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+                        @include sm-width{
+                            position: absolute;
+                            width: 100%;
+                            bottom: -30px;
+                        }
+                    }
+                }
+            }
+
+            .item_txt{
+                @include font_rwd;
+                @include md-width{
+                    @include inline_block_middle;
+                    width: 53%;
+                    padding-left: 6%;
+                }
+
+                .item_title{
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                }
+
+                .item_des{
+                    padding: 15px 0;
+                    color: #555;
+                    font-size: 0.9em;
+                    line-height: 1.4em;
+                }
+
+                .item_detail{
+                    padding-left: 20px;
+
+                    li{
+                        list-style-type: square;
+                        padding: 7px 0;
+                    }
+                }
             }
         }
     }

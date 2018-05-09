@@ -8,6 +8,7 @@
 <script src="js/html5.js"></script>
 <![endif]-->
 <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /> -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
 
 <script src="js/jquery-1-12-4.min.js"></script>
 
@@ -19,7 +20,7 @@
 <script>
 $(function(){
 	$('#fullpage').fullpage({
-		sectionsColor: ['#FFF', '#FFF', '#C0C0C0', '#ADD8E6'],
+		sectionsColor: ['#FFF', '#FFF', '#EEE', '#ADD8E6'],
 		nevigation: true
 	});
 })
@@ -27,17 +28,74 @@ $(function(){
 <body>
 	<div id="fullpage" class="index_page">
 	    <div class="section index_banner">
-	    	<div class="item_title">
-	    		<div class="welcome">Welecome！</div>
-	    		<div class="item_img"></div>
-	    		<div class="name">我叫陳琪韻</div>
-	    	</div>
+	    	<div class="max_width">
+		    	<div class="item_title">
+		    		<div class="welcome">Welecome！</div>
+		    		<div class="item_img"></div>
+		    		<div class="name">我叫陳琪韻</div>
+		    	</div>
+		    </div>
 	    </div>
 	    <div class="section">
-	        <div class="slide" data-anchor="slide1">Slide 2.1</div>
-	        <div class="slide" data-anchor="slide2">Slide 2.2</div>
+	        <!-- <div class="slide" data-anchor="slide1">Slide 2.1</div>
+	        <div class="slide" data-anchor="slide2">Slide 2.2</div> -->
+	        <div class="max_width">
+		        <div class="section_title">About</div>
+		        <div class="index_about_inner">
+					<p>　　對於網頁設計和前端的領域，因為本身畢業於成功大學資工系，所以在之前的修習課程中有關於html、CSS、php有著基本的了解，之後在成大老年所擔任網頁設計的專案助理還有在雲嘉南區域資源中心擔任網頁設計，負責網頁介面設計、CSS協助撰寫、和運用bootstrap製作RWD的說明網頁，在這之中了解的響應式網頁的概念，對於團隊合作還有html、css有了更深的了解。</p>
+					<p>　　之後畢業到了東東餐飲企業擔任網頁設計專員，負責維護公司旗下12個php網頁，因為有時候會有表單、系統信件調整，所以會做簡單的資料庫串接和調整，還有一些javascript、css等等的網頁調整維護的部分。</p>
+					<p>但後來認為工作內容不符合自己的期待而來到了米棋多媒體整合行銷公司，擔任網頁前端的職位，在這裡學會完整的RWD網頁的設計、切版、前端檢查、和後端合作、特效等等的完整網頁製作流程，其中使用了sass預處理css、jquery的網頁特效製作、javascript的表單檢查或頁面資料處理、簡單的php撰寫、Github版本控制等等技術，因為公司的作風比較自由，所以在這每次的案子之中，我都會去找方法讓網頁架構更精簡、或是運用不同的頁面效果、參考技術文章去找尋自己可以改進的地方，讓自己每次的成果能夠越來越好，然後因為公司使用的是php架構的網頁，所以有時候也可以協助修改一些小地方，減輕後端工程師的負擔。</p>
+				</div>
+		    </div>
 	    </div>
-	    <div class="section">Section 3</div>
+	    <div class="section">
+	    	<div class="section_title">Profile</div>
+	    	<div class="index_profile_inner">
+	    		<div class="slide" data-anchor="slide1">
+	    			<div class="profile_item">
+		    			<a href="http://www.cheng-jhan.com/index.php" target="_blank">
+			    			<div class="item_img" style="background-image: url('images/profile_01.jpg');">
+			    				<div class="mask">
+				    				<div class="item_link">
+					    				<i class="fas fa-link"></i>
+					    			</div>
+				    			</div>
+			    			</div>
+			    		</a>
+		    			<div class="item_txt">
+		    				<div class="item_title">展示型RWD網頁</div>
+		    				<div class="item_des">這個是一個展示商品和公司資訊的網站，所以主要的頁面都是展示的頁面為主，色系的搭配是由logo色延伸，但因為logo的主色都是彩度比較高的橘色和綠色，所以配上以白色為基底還有一些工程科技的形象圖，讓人可以看出這個公司的營業項目類別又不會過於衝突。</div>
+		    				<ul class="item_detail">
+								<li>首頁3D輪播特效套件</li>
+								<li>響應式header由左滑入套件</li>
+								<li>多層產品目錄效果</li>
+		    				</ul>
+		    			</div>
+		    		</div>
+	    		</div>
+	        	<div class="slide" data-anchor="slide2">
+	        		<div class="profile_item">
+		    			<a href="http://www.cheng-jhan.com/index.php" target="_blank">
+			    			<div class="item_img" style="background-image: url('images/profile_01.jpg');">
+			    				<div class="mask">
+				    				<div class="item_link">
+					    				<i class="fas fa-link"></i>
+					    			</div>
+				    			</div>
+			    			</div>
+			    		</a>
+		    			<div class="item_txt">
+		    				<div class="item_title">展示型RWD網頁</div>
+		    				<ul class="item_detail">
+								<li>首頁3D輪播特效套件</li>
+								<li>響應式header由左滑入套件</li>
+								<li>多層產品目錄效果</li>
+		    				</ul>
+		    			</div>
+		    		</div>
+	        	</div>
+	    	</div>
+	    </div>
 	    <div class="section">Section 4</div>
 	</div>
 </body>
