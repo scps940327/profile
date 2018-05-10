@@ -362,6 +362,9 @@ td {
         @include sm-width{
             width: 50%;
         }
+        @include xs-width{
+            width: 80%;
+        }
 
         &:before{
             content: '.';

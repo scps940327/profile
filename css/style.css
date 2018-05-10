@@ -79,6 +79,7 @@ td { display: table-cell; }
 .index_page .section { padding: 0 5%; }
 .index_page .section_title { color: #00ADA7; font-weight: bold; font-size: 1.5em; padding: 10px 0; width: 30%; border-bottom: 1px #00ADA7 solid; position: relative; margin-bottom: 20px; }
 @media all and (max-width: 767px) { .index_page .section_title { width: 50%; } }
+@media all and (max-width: 479px) { .index_page .section_title { width: 80%; } }
 .index_page .section_title:before { content: '.'; position: absolute; bottom: -0.35em; left: -2px; font-size: 1.6em; }
 .index_page .index_banner { background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url("../images/index_banner-02.svg"); }
 .index_page .index_banner .fp-tableCell { background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 54%, white 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 54%, white 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 54%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */ }
