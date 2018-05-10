@@ -263,6 +263,86 @@ td {
     margin: auto;
 }
 
+/*滑入動畫*/
+.slide-in {
+    opacity: 0;  
+    transition: all .5s;  
+    transform: translateX(-30%) scale(0.95);
+
+    &.slide-left {
+        opacity: 0;  
+        transition: all .5s;  
+        transform: translateX(30%) scale(0.95);
+    }
+
+    &.slide-up {
+        opacity: 0;  
+        transition: all .5s;  
+        transform: translateY(30%) scale(0.95);
+    }
+
+    &.active {
+        opacity: 1;  
+        transform: translateX(0%) scale(1);
+    }
+
+    &.slide-up.active {
+        opacity: 1;  
+        transform: translateY(0%) scale(1);
+    }
+}
+
+.fp-controlArrow.fp-next{
+    @include sm-width{
+        border-width: 25px 0 25px 20px;
+        right: 5px;
+    }
+    border-color: transparent transparent transparent #777;
+}
+
+.fp-controlArrow.fp-prev{
+    @include sm-width{
+        border-width: 25px 20px 25px 0;
+        left: 5px;
+    }
+    border-color: transparent #777 transparent transparent;
+}
+
+.slick-prev{
+    left: -5%;
+
+    &::before{
+        content:'';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 20px 25px 0;
+        border-color: transparent #777777 transparent transparent;
+        font-size: 0;
+        display: block;
+        @include md-width{
+            border-width: 38.5px 35px 38.5px 0;
+        }
+    }
+}
+.slick-next{
+    right: -3.5%;
+
+    &::before{
+        content:'';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 0 25px 20px;
+        border-color: transparent transparent transparent #777777;
+        font-size: 0;
+        display: block;
+        @include md-width{
+            border-width: 38.5px 0 38.5px 35px;
+        }
+    }
+}
+
 .index_page{
     color: #333;
 
@@ -342,6 +422,9 @@ td {
         @include md-width{
             font-size: 0;
         }
+        @include sm-width{
+            padding: 0 5%;
+        }
 
         .profile_item{
             margin-bottom: 5%;
@@ -349,7 +432,7 @@ td {
             .item_img{
                 @include bg_img;
                 border: 1px #FFF solid;
-                border-radius: 5px;
+                border-radius: 10px;
                 @include md-width{
                     font-size: 16px;
                     @include inline_block_middle;
@@ -363,11 +446,11 @@ td {
                 }
 
                 .mask{
-                    border-radius: 5px;
+                    border-radius: 10px;
                     opacity: 0;
                     display: table;
                     width: 100%;
-                    padding: 30% 10px;
+                    padding: 25% 10px;
                     color: #FFF;
                     background-color: rgba(0,0,0,0.7);
                     transition: all 1s;
@@ -391,8 +474,12 @@ td {
 
                 .section_title{
                     width: 60%;
-                    padding-bottom: 20px;
                     min-width: 200px;
+                    @include sm-width{
+                        font-size: 1.2em;
+                        padding-bottom: 5px;
+                        padding-top: 20px;
+                    }
                     @include xs-width{
                         width: 80%;
                     }
@@ -403,6 +490,9 @@ td {
                     color: #555;
                     font-size: 0.9em;
                     line-height: 1.4em;
+                    @include sm-width{
+                        padding: 0 0 10px 0;
+                    }
                 }
 
                 .item_detail{
@@ -411,8 +501,29 @@ td {
                     li{
                         list-style-type: square;
                         padding: 7px 0;
+                        @include xs-width{
+                            padding: 2% 0;
+                        }
                     }
                 }
+            }
+        }
+    }
+
+    .index_system_inner{
+        .system_item{
+            padding: 30px 15px 0 15px;
+
+            &:hover{
+                .item_img{
+                    opacity: 0.7;
+                }
+            }
+
+            .item_img{
+                @include bg_img;
+                padding-bottom: 66.66%;
+                box-shadow: 0 0 6px rgba(0,0,0,0.4);
             }
         }
     }
