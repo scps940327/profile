@@ -1,7 +1,11 @@
 import $ from "jquery";
+import 'fullPage.js'
+import './node_modules/fullpage.js/dist/jquery.fullpage.css'
 import fontawesome from '@fortawesome/fontawesome-free/js/all.js'
 import slick from 'slick-carousel'
 
+require( "slick-carousel/slick/slick.scss");
+require( "slick-carousel/slick/slick-theme.scss");
 require( './src/scss/style.scss' );
 
 $(function(){
