@@ -10,8 +10,8 @@ require( './src/scss/style.scss' );
 
 $(function(){
 	$('#fullpage').fullpage({
-		sectionsColor: ['#FFF', '#FFF', '#EEE', '#FFF'],
-		anchors: ['banner', 'profile1', 'profile2', 'lastPage'],
+		sectionsColor: ['#FFF', '#FFF', '#EEE', '#FFF', '#EEE'],
+		anchors: ['banner', 'introduction' , 'job' , 'profile1', 'profile2'],
 		nevigation: true,
 		afterLoad: function(anchorLink, index){
 			$(this).find('.slide-in').addClass('active');
