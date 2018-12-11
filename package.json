@@ -1,7 +1,7 @@
 {
-  "name": "webpack_test",
+  "name": "profile",
   "version": "1.0.0",
-  "description": "test webpack with sass and react",
+  "description": "chichi profile",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scps940327/webpack_test.git"
+    "url": "git+https://github.com/scps940327/profile.git"
   },
-  "author": "chi chi",
+  "author": "chichi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/scps940327/webpack_test/issues"
+    "url": "https://github.com/scps940327/profile/issues"
   },
-  "homepage": "https://github.com/scps940327/webpack_test#readme",
+  "homepage": "https://github.com/scps940327/profile#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
