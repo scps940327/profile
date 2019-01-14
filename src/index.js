@@ -1,4 +1,4 @@
-//import FormContainer from "./js/components/container/FormContainer";
-import App from "./js/components/container/DateContainer";
+import App from "./js/components/container/Header";
+import Fullpage from "./js/Content";
 
 require('./scss/style.scss');
