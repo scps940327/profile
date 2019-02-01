@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 class Header extends React.Component {
    render() {
       return (
-        <div class="section_title">{this.props.title}</div>
+        <div className="section_title">{this.props.title}</div>
       );
    }
 }
@@ -12,19 +12,19 @@ class Header extends React.Component {
 class TableRow extends React.Component {
    render() {
       return (
-         <div className="job_item">
-            <div className="date">{this.props.data.date}</div>
-            <div className="item_txt">
-               <div className="name">{this.props.data.name}</div>
-               <div className="detail">
-                  <div>
-                     <span class="label">內容</span>
-                     <span>{this.props.data.detail}</span>
-                  </div>
-                  <div>
-                     <span class="label">技術</span>
-                     <span>{this.props.data.tech}</span>
-                  </div>
+         <div className="row justify-content-end align-items-center py-4 mx-0 border-bottom">
+            <div className="col-2 col-md-auto">
+               <div className="bg-warning rounded-circle round_txt text-white">{this.props.data.date}</div>
+            </div>
+            <div className="col col-md-3 font-weight-bold">{this.props.data.name}</div>
+            <div className="col-10 col-md">
+               <div className="pb-2">
+                  <span className="p-1 mr-2 rounded bg-secondary text-white">內容</span>
+                  <span>{this.props.data.detail}</span>
+               </div>
+               <div>
+                  <span className="p-1 mr-2 rounded bg-secondary text-white">技術</span>
+                  <span>{this.props.data.tech}</span>
                </div>
             </div>
          </div>
@@ -32,7 +32,7 @@ class TableRow extends React.Component {
    }
 }
 
-class App extends React.Component {
+class Experience extends React.Component {
    constructor() {
       super();
       this.state = {
@@ -62,13 +62,11 @@ class App extends React.Component {
    }
    render() {
       return (
-         <div className="section">
+         <div className="max_width">
             <Header title = {this.state.id} />
-            <div className="max_width">
-               <div className="section_inner">
-                  {this.state.data.map((job_item, i) => 
-                  <TableRow key = {i} data = {job_item} />)}
-               </div>
+            <div className="section_inner">
+               {this.state.data.map((job_item, i) => 
+               <TableRow key = {i} data = {job_item} />)}
             </div>
          </div>
       );
@@ -76,5 +74,4 @@ class App extends React.Component {
 }
 
 
-export default App;
-ReactDOM.render(<App/>, document.getElementById('root'));
+export default Experience;

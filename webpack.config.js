@@ -53,7 +53,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
-      chunks: ['index'] // 預設會將打包出的所有 js 插入 html。故需指明頁面需要的模組
+      chunks: ['index'], // 預設會將打包出的所有 js 插入 html。故需指明頁面需要的模組
+      favicon: 'favicon.ico',
     }),
     // new HtmlWebPackPlugin({
     //   template: 'src/index.html',
