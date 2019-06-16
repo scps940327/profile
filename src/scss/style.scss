@@ -275,10 +275,12 @@
     }
 }
 
-.item_img{
-    @include bg_img;
-    padding-bottom: 66.66%;
-    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+.project_item{
+  .item_img{
+      @include bg_img;
+      padding-bottom: 66.66%;
+      box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  }
 }
 
 .detail_txt{
