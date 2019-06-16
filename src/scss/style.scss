@@ -278,8 +278,12 @@
 .project_item{
   .item_img{
       @include bg_img;
-      padding-bottom: 66.66%;
+      background-position: top center;
+      padding-bottom: 45%;
       box-shadow: 0 0 6px rgba(0,0,0,0.4);
+      @include sm-width{
+        padding-bottom: 66.66%;
+      }
   }
 }
 
