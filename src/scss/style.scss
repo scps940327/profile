@@ -259,7 +259,7 @@
 
 .index_system_inner{
     .system_item{
-        padding: 30px 15px 0 15px;
+        padding: 0 15px;
 
         &:hover{
             .item_img{
@@ -273,4 +273,14 @@
         padding-bottom: 66.66%;
         box-shadow: 0 0 6px rgba(0,0,0,0.4);
     }
+}
+
+.item_img{
+    @include bg_img;
+    padding-bottom: 66.66%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.detail_txt{
+  padding-bottom: 30px;
 }
